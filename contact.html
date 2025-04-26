@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontaktní informace Adama Kelbla - spojte se se mnou">
+    <meta name="keywords" content="Adam Kelbl, kontakt, email, LinkedIn, GitHub">
+    <meta name="author" content="Adam Kelbl">
     <title>Kontakt | Adam Kelbl</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
     <!-- CSS & Font -->
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -17,6 +26,7 @@
     <header>
         <div class="header-content">
             <div class="site-title">Adam Kelbl</div>
+            <button class="mobile-menu-btn">☰</button>
             <nav>
                 <a href="index.html">O mně</a>
                 <a href="portfolio.html">Portfolio</a>
@@ -26,37 +36,55 @@
         </div>
     </header>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="profile-content">
-            <div class="section-header">
-                <h1>Kontakt</h1>
+    <!-- Main Content -->
+    <main>
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h1>Kontakt</h1>
+                </div>
+
+                <div class="simple-contact-container">
+                    <div class="contact-item slide-up">
+                        <div class="contact-icon">
+                            <img src="icons/email.svg" alt="Email">
+                        </div>
+                        <div class="contact-text">
+                            <p><a href="mailto:email@domena.cz">email@domena.cz</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item slide-up">
+                        <div class="contact-icon">
+                            <img src="icons/linkedin.svg" alt="LinkedIn">
+                        </div>
+                        <div class="contact-text">
+                            <p><a href="https://linkedin.com/in/adamkelbl" target="_blank">LinkedIn</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item slide-up">
+                        <div class="contact-icon">
+                            <img src="icons/github.svg" alt="GitHub">
+                        </div>
+                        <div class="contact-text">
+                            <p><a href="https://github.com/adamkelbl" target="_blank">GitHub</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item slide-up">
+                        <div class="contact-icon">
+                            <img src="icons/phone.svg" alt="Telefon">
+                        </div>
+                        <div class="contact-text">
+                            <p>+420 123 456 789</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="simple-contact-container">
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
-                    <div class="contact-text">
-                        <p><a href="mailto:email@domena.cz">email@domena.cz</a></p>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-icon">👔</div>
-                    <div class="contact-text">
-                        <p><a href="https://linkedin.com/in/adamkelbl" target="_blank">LinkedIn</a></p>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-icon">💻</div>
-                    <div class="contact-text">
-                        <p><a href="https://github.com/adamkelbl" target="_blank">GitHub</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>

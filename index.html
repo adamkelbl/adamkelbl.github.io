@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adam Kelbl</title>
-    
+    <meta name="description" content="Osobní webové stránky Adama Kelbla - vývojář, designer a kreativec">
+    <meta name="keywords" content="Adam Kelbl, portfolio, vývojář, designer, web">
+    <meta name="author" content="Adam Kelbl">
+    <title>Adam Kelbl | Osobní stránky</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
     <!-- CSS & Font -->
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -17,6 +26,7 @@
     <header>
         <div class="header-content">
             <div class="site-title">Adam Kelbl</div>
+            <button class="mobile-menu-btn">☰</button>
             <nav>
                 <a href="index.html">O mně</a>
                 <a href="portfolio.html">Portfolio</a>
@@ -26,28 +36,43 @@
         </div>
     </header>
 
-    <!-- Pod headerem -->
-    <section class="profile">
-        <div class="profile-content">
-            <div class="profile-left">
-                <div class="profile-image-container">
-                    <img src="photo.jpg" alt="Adam Kelbl" class="profile-image">
+    <!-- Main Content -->
+    <main>
+        <!-- Profile Section -->
+        <section class="profile">
+            <div class="profile-content">
+                <div class="profile-left fade-in">
+                    <div class="profile-image-container">
+                        <img src="photo.jpg" alt="Adam Kelbl" class="profile-image">
+                    </div>
+                    <div class="contact-links">
+                        <a href="mailto:email@domena.cz">
+                            <img src="icons/email.svg" alt="Email" class="contact-icon"> email@domena.cz
+                        </a>
+                        <a href="https://linkedin.com/in/adamkelbl" target="_blank">
+                            <img src="icons/linkedin.svg" alt="LinkedIn" class="contact-icon"> LinkedIn
+                        </a>
+                        <a href="https://github.com/adamkelbl" target="_blank">
+                            <img src="icons/github.svg" alt="GitHub" class="contact-icon"> GitHub
+                        </a>
+                    </div>
                 </div>
-                <div class="contact-links">
-                    <a href="mailto:email@domena.cz">📧 email@domena.cz</a>
-                    <a href="https://linkedin.com/in/adamkelbl" target="_blank">👔 LinkedIn</a>
-                    <a href="https://github.com/adamkelbl" target="_blank">💻 GitHub</a>
+                <div class="profile-info slide-up">
+                    <h1>O mně</h1>
+                    <p class="profile-text">
+                        Zde bude váš text o sobě... Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <p class="profile-text">
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                        deserunt mollit anim id est laborum.
+                    </p>
                 </div>
             </div>
-            <div class="profile-info">
-                <h1>O mně</h1>
-                <p class="profile-text">
-                    Zde bude váš text o sobě... Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>

@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Adama Kelbla - ukázky projektů a práce">
+    <meta name="keywords" content="Adam Kelbl, portfolio, projekty, vývojář, designer">
+    <meta name="author" content="Adam Kelbl">
     <title>Portfolio | Adam Kelbl</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
     <!-- CSS & Font -->
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -17,6 +26,7 @@
     <header>
         <div class="header-content">
             <div class="site-title">Adam Kelbl</div>
+            <button class="mobile-menu-btn">☰</button>
             <nav>
                 <a href="index.html">O mně</a>
                 <a href="portfolio.html">Portfolio</a>
@@ -26,59 +36,65 @@
         </div>
     </header>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio-section">
-        <div class="profile-content">
-            <div class="section-header">
-                <h1>Portfolio</h1>
+    <!-- Main Content -->
+    <main>
+        <!-- Portfolio Section -->
+        <section class="portfolio-section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h1>Portfolio</h1>
+                </div>
+
+                <div class="portfolio-grid">
+                    <!-- Project 1 -->
+                    <div class="portfolio-item slide-up">
+                        <img src="https://via.placeholder.com/600x400/2980b9/ffffff?text=Projekt+1" alt="Projekt 1" class="portfolio-image">
+                        <div class="portfolio-details">
+                            <h2>Webová aplikace</h2>
+                            <p>Moderní webová aplikace s responzivním designem a pokročilou funkcionalitou. Využívá nejnovější technologie pro optimální výkon a uživatelský zážitek.</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">React</span>
+                            </div>
+                            <a href="#" class="portfolio-link">Zobrazit projekt</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="portfolio-item slide-up">
+                        <img src="https://via.placeholder.com/600x400/3498db/ffffff?text=Projekt+2" alt="Projekt 2" class="portfolio-image">
+                        <div class="portfolio-details">
+                            <h2>E-commerce řešení</h2>
+                            <p>Komplexní e-commerce platforma s integrovaným platebním systémem, správou objednávek a pokročilou analýzou dat pro optimalizaci prodeje.</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">MongoDB</span>
+                            </div>
+                            <a href="#" class="portfolio-link">Zobrazit projekt</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="portfolio-item slide-up">
+                        <img src="https://via.placeholder.com/600x400/1c638f/ffffff?text=Projekt+3" alt="Projekt 3" class="portfolio-image">
+                        <div class="portfolio-details">
+                            <h2>Mobilní aplikace</h2>
+                            <p>Inovativní mobilní aplikace s intuitivním uživatelským rozhraním a pokročilými funkcemi. Optimalizováno pro iOS i Android platformy.</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Django</span>
+                                <span class="tag">PostgreSQL</span>
+                            </div>
+                            <a href="#" class="portfolio-link">Zobrazit projekt</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="portfolio-grid">
-                <!-- Project 1 -->
-                <div class="portfolio-item">
-                    <img src="project1.jpg" alt="Projekt 1" class="portfolio-image">
-                    <div class="portfolio-details">
-                        <h2>Projekt 1</h2>
-                        <p>Popis projektu 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                        </div>
-                        <a href="#" class="portfolio-link">Zobrazit projekt</a>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="portfolio-item">
-                    <img src="project2.jpg" alt="Projekt 2" class="portfolio-image">
-                    <div class="portfolio-details">
-                        <h2>Projekt 2</h2>
-                        <p>Popis projektu 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                        </div>
-                        <a href="#" class="portfolio-link">Zobrazit projekt</a>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="portfolio-item">
-                    <img src="project3.jpg" alt="Projekt 3" class="portfolio-image">
-                    <div class="portfolio-details">
-                        <h2>Projekt 3</h2>
-                        <p>Popis projektu 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Django</span>
-                        </div>
-                        <a href="#" class="portfolio-link">Zobrazit projekt</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>

@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curriculum Vitae Adama Kelbla - profesní životopis a zkušenosti">
+    <meta name="keywords" content="Adam Kelbl, CV, životopis, zkušenosti, vzdělání">
+    <meta name="author" content="Adam Kelbl">
     <title>CV | Adam Kelbl</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
     <!-- CSS & Font -->
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -17,6 +26,7 @@
     <header>
         <div class="header-content">
             <div class="site-title">Adam Kelbl</div>
+            <button class="mobile-menu-btn">☰</button>
             <nav>
                 <a href="index.html">O mně</a>
                 <a href="portfolio.html">Portfolio</a>
@@ -26,19 +36,125 @@
         </div>
     </header>
 
-    <!-- CV Section -->
-    <section class="cv-section">
-        <div class="profile-content">
-            <div class="section-header">
-                <h1>Curriculum Vitae</h1>
-            </div>
+    <!-- Main Content -->
+    <main>
+        <!-- CV Section -->
+        <section class="cv-section">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h1>Curriculum Vitae</h1>
+                </div>
 
-            <div class="cv-container">
-                <!-- Empty CV page as requested -->
-                <p class="empty-page-message">Tato stránka je zatím prázdná.</p>
+                <div class="cv-container slide-up">
+                    <div class="cv-section-block">
+                        <h2>Vzdělání</h2>
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h3>Magisterský titul v oboru Informatika</h3>
+                                <span class="cv-date">2018 - 2020</span>
+                            </div>
+                            <p class="cv-institution">Univerzita Karlova, Praha</p>
+                            <p class="cv-description">Specializace na vývoj webových aplikací a umělou inteligenci. Diplomová práce na téma "Moderní přístupy k vývoji responzivních webových aplikací".</p>
+                        </div>
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h3>Bakalářský titul v oboru Informatika</h3>
+                                <span class="cv-date">2015 - 2018</span>
+                            </div>
+                            <p class="cv-institution">Univerzita Karlova, Praha</p>
+                            <p class="cv-description">Zaměření na programování a vývoj software. Bakalářská práce na téma "Implementace webových aplikací s využitím moderních frameworků".</p>
+                        </div>
+                    </div>
+
+                    <div class="cv-section-block">
+                        <h2>Pracovní zkušenosti</h2>
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h3>Senior Web Developer</h3>
+                                <span class="cv-date">2022 - současnost</span>
+                            </div>
+                            <p class="cv-institution">Technologická společnost XYZ, Praha</p>
+                            <p class="cv-description">Vývoj a údržba komplexních webových aplikací. Vedení týmu 5 vývojářů. Implementace moderních technologií a postupů pro zlepšení výkonu a uživatelské zkušenosti.</p>
+                        </div>
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h3>Web Developer</h3>
+                                <span class="cv-date">2020 - 2022</span>
+                            </div>
+                            <p class="cv-institution">Digitální agentura ABC, Praha</p>
+                            <p class="cv-description">Vývoj webových stránek a aplikací pro klienty z různých odvětví. Práce s React, Node.js a MongoDB. Implementace responzivního designu a optimalizace pro mobilní zařízení.</p>
+                        </div>
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h3>Junior Developer</h3>
+                                <span class="cv-date">2018 - 2020</span>
+                            </div>
+                            <p class="cv-institution">Startup XYZ, Praha</p>
+                            <p class="cv-description">Vývoj front-end částí webových aplikací. Spolupráce na implementaci uživatelského rozhraní a interaktivních prvků.</p>
+                        </div>
+                    </div>
+
+                    <div class="cv-section-block">
+                        <h2>Dovednosti</h2>
+                        <div class="skills-container">
+                            <div class="skill-category">
+                                <h3>Programovací jazyky</h3>
+                                <ul>
+                                    <li>JavaScript (ES6+)</li>
+                                    <li>HTML5 & CSS3</li>
+                                    <li>Python</li>
+                                    <li>PHP</li>
+                                </ul>
+                            </div>
+
+                            <div class="skill-category">
+                                <h3>Frameworky & Knihovny</h3>
+                                <ul>
+                                    <li>React</li>
+                                    <li>Vue.js</li>
+                                    <li>Node.js</li>
+                                    <li>Express</li>
+                                    <li>Django</li>
+                                </ul>
+                            </div>
+
+                            <div class="skill-category">
+                                <h3>Nástroje & Technologie</h3>
+                                <ul>
+                                    <li>Git</li>
+                                    <li>Docker</li>
+                                    <li>AWS</li>
+                                    <li>MongoDB</li>
+                                    <li>PostgreSQL</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cv-section-block">
+                        <h2>Jazyky</h2>
+                        <div class="languages-container">
+                            <div class="language-item">
+                                <span class="language-name">Čeština</span>
+                                <span class="language-level">Rodilý mluvčí</span>
+                            </div>
+                            <div class="language-item">
+                                <span class="language-name">Angličtina</span>
+                                <span class="language-level">Pokročilá úroveň (C1)</span>
+                            </div>
+                            <div class="language-item">
+                                <span class="language-name">Němčina</span>
+                                <span class="language-level">Středně pokročilá úroveň (B1)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
