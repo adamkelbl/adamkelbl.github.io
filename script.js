@@ -67,7 +67,5 @@ document.addEventListener('DOMContentLoaded', () => {
     setActiveNavLink();
     setupMobileMenu();
     setupAnimations();
-    
-    // Přidání event listeneru pro scroll
     window.addEventListener('scroll', handleScroll);
 });
