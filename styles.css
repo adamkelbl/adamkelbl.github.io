@@ -84,6 +84,16 @@ header.scrolled {
     padding: 5px 0;
 }
 
+.site-title a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.site-title a:hover {
+    color: var(--primary-color);
+}
+
 nav {
     display: flex;
     gap: 30px;
@@ -227,6 +237,7 @@ main {
     color: var(--text-color);
     margin-bottom: 30px;
     text-align: justify;
+    text-justify: inter-word;
 }
 
 /* Section Header Styles */
@@ -540,17 +551,18 @@ main {
 
 /* Footer styles */
 footer {
-    background-color: #222222;
-    color: var(--white);
+    background-color: var(--light-bg);
+    padding: 20px 0;
     text-align: center;
-    padding: 30px 0;
-    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 footer p {
     margin: 0;
-    font-size: 16px;
-    opacity: 0.9;
+    color: var(--text-light);
+    font-size: 14px;
 }
 
 /* Animation classes */
