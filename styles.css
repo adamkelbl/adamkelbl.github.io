@@ -11,6 +11,7 @@
     --text-color: #333333;
     --text-light: #6c757d;
     --container-width: 1200px;
+    --portfolio-width: 900px;
 }
 
 body {
@@ -56,8 +57,8 @@ header.scrolled {
 
 .site-title {
     font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
+    font-weight: normal;
+    color: var(--text-color);
 }
 
 .site-title a {
@@ -138,6 +139,7 @@ nav a.active {
 .profile {
     padding: 5rem 0;
     background-color: var(--light-bg);
+    min-height: 100vh;
 }
 
 .profile-content {
@@ -251,7 +253,8 @@ nav a.active {
 /* Portfolio Styles */
 .portfolio-section {
     padding: 5rem 0;
-    background-color: #fff;
+    background-color: var(--light-bg);
+    min-height: 100vh;
 }
 
 .portfolio-grid {
@@ -259,6 +262,9 @@ nav a.active {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
     margin-top: 2rem;
+    max-width: var(--portfolio-width);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .portfolio-item {
