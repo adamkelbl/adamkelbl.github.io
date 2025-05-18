@@ -57,7 +57,7 @@ header.scrolled {
 
 .site-title {
     font-size: 1.5rem;
-    font-weight: normal;
+    font-weight: bold;
     color: var(--text-color);
 }
 
@@ -68,7 +68,7 @@ header.scrolled {
 }
 
 .site-title a:hover {
-    color: var(--primary-dark);
+    color: var(--primary-color);
 }
 
 nav {
@@ -259,7 +259,7 @@ nav a.active {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
     margin-top: 2rem;
     max-width: var(--portfolio-width);
@@ -623,8 +623,6 @@ footer p {
     .portfolio-grid {
         grid-template-columns: 1fr;
         max-width: 32rem;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .section-header h1 {
