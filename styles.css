@@ -420,3 +420,81 @@
         }
     }
 }
+
+@layer components {
+    .header-content {
+        @apply max-w-container-width mx-auto px-4 py-4 flex justify-between items-center;
+    }
+    
+    .site-title {
+        @apply text-2xl font-bold text-primary-color;
+    }
+    
+    .site-title a {
+        @apply hover:text-primary-dark transition-colors;
+    }
+    
+    .mobile-menu-btn {
+        @apply md:hidden text-2xl text-primary-color hover:text-primary-dark transition-colors;
+    }
+    
+    nav {
+        @apply hidden md:flex space-x-6;
+    }
+    
+    nav a {
+        @apply text-secondary-color hover:text-primary-color transition-colors;
+    }
+    
+    .profile {
+        @apply py-12 bg-light-bg;
+    }
+    
+    .profile-content {
+        @apply max-w-container-width mx-auto px-4 flex flex-col md:flex-row gap-8;
+    }
+    
+    .profile-left {
+        @apply flex flex-col items-center gap-6;
+    }
+    
+    .profile-image-container {
+        @apply w-48 h-48 rounded-full overflow-hidden shadow-lg;
+    }
+    
+    .profile-image {
+        @apply w-full h-full object-cover;
+    }
+    
+    .contact-links {
+        @apply flex flex-col gap-3;
+    }
+    
+    .contact-links a {
+        @apply flex items-center text-secondary-color hover:text-primary-color transition-colors;
+    }
+    
+    .contact-icon {
+        @apply w-5 h-5 mr-2;
+    }
+    
+    .profile-info {
+        @apply flex-1;
+    }
+    
+    .profile-info h1 {
+        @apply text-3xl font-bold text-secondary-color mb-4;
+    }
+    
+    .profile-text {
+        @apply text-text-color leading-relaxed;
+    }
+    
+    footer {
+        @apply bg-dark-bg text-white py-6;
+    }
+    
+    .footer-content {
+        @apply max-w-container-width mx-auto px-4 text-center;
+    }
+}
