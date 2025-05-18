@@ -3,28 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-    :root {
-        --primary-color: #2980b9;
-        --primary-dark: #1c638f;
-        --secondary-color: #333333;
-        --accent-color: #3498db;
-        --light-bg: #f8f9fa;
-        --dark-bg: #343a40;
-        --text-color: #333333;
-        --text-light: #6c757d;
-        --white: #ffffff;
-        --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        --transition: all 0.3s ease;
-        --border-radius: 8px;
-        --container-width: 1200px;
-    }
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
     body {
         @apply min-h-screen flex flex-col font-sans text-text-color bg-white leading-relaxed;
     }
