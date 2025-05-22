@@ -11,7 +11,7 @@
     --text-color: #333333;
     --text-light: #6c757d;
     --container-width: 1200px;
-    --portfolio-width: 1200px;
+    --portfolio-width: 1400px;
 }
 
 body {
@@ -21,7 +21,7 @@ body {
     flex-direction: column;
     margin: 0;
     color: var(--text-color);
-    background-color: #fff;
+    background-color:#f8f9fa;
     line-height: 1.6;
 }
 
@@ -145,12 +145,15 @@ nav a.active {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 @media (min-width: 768px) {
     .profile-content {
         flex-direction: row;
         align-items: center;
+        padding-left: 1rem;
     }
 }
 
@@ -170,6 +173,8 @@ nav a.active {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 8px solid #fff;
     transition: all 0.3s;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .profile-image-container:hover {
@@ -185,17 +190,18 @@ nav a.active {
 }
 
 .contact-links {
+    width: calc(16rem + 16px); /* Match the width of profile-image-container including its margin */
+    margin-left: 0; /* Align left with profile-image-container */
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    width: 100%;
+    gap: 1rem; /* Reduce vertical spacing between links */
 }
 
 .contact-links a {
     display: flex;
     align-items: center;
     gap: 0.625rem;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem; /* Slightly reduce height of each link */
     background-color: #fff;
     border-radius: 0.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -219,6 +225,12 @@ nav a.active {
     flex: 1;
 }
 
+@media (min-width: 768px) {
+    .profile-info {
+        text-align: left;
+    }
+}
+
 .profile-info h1 {
     font-size: 2.5rem;
     color: var(--secondary-color);
@@ -236,7 +248,7 @@ nav a.active {
 /* Section Header Styles */
 .section-header {
     margin-bottom: 3rem;
-    text-align: center;
+    text-align: center; /* Center align the section header */
 }
 
 .section-header h1 {
@@ -251,20 +263,25 @@ nav a.active {
     padding: 5rem 0;
     background-color: var(--light-bg);
     min-height: 100vh;
+    justify-items: center;
 }
 
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    gap: 5.5rem;
     margin-top: 2rem;
     max-width: var(--portfolio-width);
     margin-left: auto;
     margin-right: auto;
     padding: 0 2rem;
+    justify-items: center; /* Center the grid items horizontally */
 }
 
 .portfolio-item {
+    width: 100%; /* Slightly wider than before */
+    max-width: 400px; /* Set a maximum width for better control */
+    margin: 0 auto; /* Center each portfolio item */
     background: #fff;
     border-radius: 0.5rem;
     overflow: hidden;
@@ -274,6 +291,7 @@ nav a.active {
     text-decoration: none;
     color: var(--text-color);
     display: block;
+     justify-content: center;
 }
 
 .portfolio-item:hover {
@@ -310,6 +328,16 @@ nav a.active {
     color: var(--text-light);
     margin: 0 0 1.25rem 0;
     line-height: 1.6;
+}
+
+.date-tags .tag {
+    background-color: #878787;
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    margin-bottom: 1.25rem;
+    max-width: fit-content;
 }
 
 .portfolio-tags {
@@ -472,7 +500,7 @@ nav a.active {
 /* Contact Styles */
 .contact-section {
     padding: 5rem 0;
-    background-color: #fff;
+    background-color: var(--light-bg); /* Ensure consistent background color for the entire section */
 }
 
 .simple-contact-container {
@@ -491,7 +519,7 @@ nav a.active {
     align-items: center;
     width: 100%;
     padding: 1.25rem;
-    background-color: #fff;
+    background-color: var(--light-bg); /* Use consistent light background color */
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
@@ -667,5 +695,15 @@ footer p {
 
     .contact-icon {
         margin-right: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .profile-image-container {
+        margin-left: 0;
+    }
+
+    .profile-content {
+        justify-content: flex-start;
     }
 }
