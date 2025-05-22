@@ -269,7 +269,7 @@ nav a.active {
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5.5rem;
+    gap: 5rem;
     margin-top: 2rem;
     max-width: var(--portfolio-width);
     margin-left: auto;
