@@ -387,6 +387,10 @@ nav a.active {
     width: 100%;
 }
 
+.portfolio-item .portfolio-link:hover::after {
+    width: 0;
+}
+
 /* CV Styles */
 .cv-section {
     padding: 5rem 0;
