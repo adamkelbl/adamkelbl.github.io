@@ -773,6 +773,7 @@ footer p {
 
     nav.active {
         right: 0;
+        z-index: 999;
     }
     
     nav a {
