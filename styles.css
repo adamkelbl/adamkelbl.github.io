@@ -67,13 +67,13 @@ header {
 }
 
 nav {
-    display: none;
+    display: flex;
+    gap: 1.5rem;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767px) {
     nav {
-        display: flex;
-        gap: 1.5rem;
+        display: none;
     }
 }
 
@@ -112,7 +112,7 @@ nav a.active {
 }
 
 .mobile-menu-btn {
-    display: block;
+    display: none;
     background: none;
     border: none;
     font-size: 1.5rem;
@@ -125,6 +125,12 @@ nav a.active {
 
 .mobile-menu-btn:hover {
     color: var(--primary-dark);
+}
+
+@media (max-width: 767px) {
+    .mobile-menu-btn {
+        display: block;
+    }
 }
 
 /* Overlay pro mobilní menu */
@@ -141,10 +147,6 @@ nav a.active {
 
 .mobile-menu-overlay.active {
     display: block;
-}
-
-.mobile-menu-btn:hover {
-    color: var(--primary-dark);
 }
 
 @media (min-width: 768px) {
@@ -167,8 +169,9 @@ nav a.active {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -176,6 +179,8 @@ nav a.active {
         flex-direction: row;
         align-items: center;
         padding-left: 1rem;
+        text-align: left;
+        justify-content: flex-start;
     }
 }
 
@@ -219,7 +224,7 @@ nav a.active {
     gap: 1rem; /* Reduce vertical spacing between links */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .contact-links {
         width: 100%;
         max-width: 20rem;
@@ -253,6 +258,7 @@ nav a.active {
 
 .profile-info {
     flex: 1;
+    text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -272,7 +278,13 @@ nav a.active {
     color: var(--text-color);
     line-height: 1.8;
     margin-bottom: 2rem;
-    text-align: justify;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .profile-text {
+        text-align: justify;
+    }
 }
 
 /* Section Header Styles */
@@ -302,7 +314,7 @@ nav a.active {
     padding: 0 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .container {
         padding: 0 1rem;
     }
@@ -737,7 +749,7 @@ footer p {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .mobile-menu-btn {
         display: block;
     }
@@ -816,6 +828,7 @@ footer p {
     .profile-text {
         font-size: 1rem;
         padding: 0 1rem;
+        text-align: center;
     }
 
     .contact-item {
