@@ -26,11 +26,63 @@ function handleScroll() {
 function setupMobileMenu() {
     const menuBtn = document.querySelector('.mobile-menu-btn');
     const nav = document.querySelector('nav');
+    const body = document.body;
     
-    if (menuBtn) {
+    if (menuBtn && nav) {
+        // Vytvoření overlay elementu
+        let overlay = document.querySelector('.mobile-menu-overlay');
+        if (!overlay) {
+            overlay = document.createElement('div');
+            overlay.className = 'mobile-menu-overlay';
+            body.appendChild(overlay);
+        }
+        
+        // Funkce pro otevření menu
+        function openMenu() {
+            nav.classList.add('active');
+            overlay.classList.add('active');
+            menuBtn.textContent = '✕';
+            body.style.overflow = 'hidden'; // Zakázat scrollování na pozadí
+        }
+        
+        // Funkce pro zavření menu
+        function closeMenu() {
+            nav.classList.remove('active');
+            overlay.classList.remove('active');
+            menuBtn.textContent = '☰';
+            body.style.overflow = ''; // Povolit scrollování zpět
+        }
+        
+        // Event listenery
         menuBtn.addEventListener('click', () => {
-            nav.classList.toggle('active');
-            menuBtn.textContent = nav.classList.contains('active') ? '✕' : '☰';
+            if (nav.classList.contains('active')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+        
+        // Zavření menu při kliknutí na overlay
+        overlay.addEventListener('click', closeMenu);
+        
+        // Zavření menu při kliknutí na odkaz
+        const navLinks = nav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+        
+        // Zavření menu při změně velikosti okna (když se přepne zpět na desktop)
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                closeMenu();
+            }
+        });
+        
+        // Zavření menu při stisku ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && nav.classList.contains('active')) {
+                closeMenu();
+            }
         });
     }
 }

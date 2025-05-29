@@ -119,6 +119,28 @@ nav a.active {
     color: var(--primary-color);
     cursor: pointer;
     transition: color 0.3s;
+    padding: 0.5rem;
+    touch-action: manipulation;
+}
+
+.mobile-menu-btn:hover {
+    color: var(--primary-dark);
+}
+
+/* Overlay pro mobilní menu */
+.mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+.mobile-menu-overlay.active {
+    display: block;
 }
 
 .mobile-menu-btn:hover {
@@ -197,6 +219,14 @@ nav a.active {
     gap: 1rem; /* Reduce vertical spacing between links */
 }
 
+@media (max-width: 768px) {
+    .contact-links {
+        width: 100%;
+        max-width: 20rem;
+        margin: 0 auto;
+    }
+}
+
 .contact-links a {
     display: flex;
     align-items: center;
@@ -264,6 +294,24 @@ nav a.active {
     background-color: var(--light-bg);
     min-height: 100vh;
     justify-items: center;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 0.5rem;
+    }
 }
 
 .portfolio-grid {
@@ -363,13 +411,14 @@ nav a.active {
 }
 
 .portfolio-link {
-    display: block;
+    display: inline-block;
     color: var(--primary-color);
     font-weight: 600;
     padding: 0.5rem 0;
     position: relative;
     text-decoration: none;
     cursor: pointer;
+    width: fit-content;
 }
 
 .portfolio-link::after {
@@ -387,10 +436,6 @@ nav a.active {
     width: 100%;
 }
 
-.portfolio-item .portfolio-link:hover::after {
-    width: 0;
-}
-
 /* CV Styles */
 .cv-section {
     padding: 5rem 0;
@@ -404,6 +449,23 @@ nav a.active {
     padding: 2.5rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .cv-container {
+        padding: 1.5rem;
+        margin: 2rem 1rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .cv-container {
+        padding: 1rem;
+        margin: 2rem 0.5rem 0;
+    }
 }
 
 .cv-section-block {
@@ -631,6 +693,15 @@ footer p {
     .footer-content {
         max-width: 95%;
     }
+    
+    .portfolio-grid {
+        padding: 0 1rem;
+        gap: 3rem;
+    }
+    
+    .cv-container {
+        padding: 1.5rem;
+    }
 }
 
 @media (max-width: 992px) {
@@ -641,6 +712,28 @@ footer p {
 
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .profile {
+        padding: 4rem 0;
+    }
+    
+    .portfolio-section,
+    .cv-section,
+    .contact-section {
+        padding: 3rem 0;
+    }
+    
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .cv-item-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
     }
 }
 
@@ -650,64 +743,232 @@ footer p {
     }
 
     nav {
+        display: flex;
         position: fixed;
         top: 4.5rem;
         right: -100%;
         flex-direction: column;
         background-color: #fff;
-        width: 16rem;
+        width: 18rem;
+        max-width: 80vw;
         height: calc(100vh - 4.5rem);
-        padding: 1.75rem;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-        transition: right 0.3s;
+        padding: 2rem 1.5rem;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
+        transition: right 0.3s ease-in-out;
         z-index: 999;
+        gap: 0;
     }
 
     nav.active {
         right: 0;
     }
+    
+    nav a {
+        padding: 1rem 0;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 1.1rem;
+    }
+    
+    nav a:last-child {
+        border-bottom: none;
+    }
 
     .portfolio-grid {
         grid-template-columns: 1fr;
         max-width: 32rem;
+        gap: 2rem;
     }
 
     .section-header h1 {
         font-size: 2rem;
     }
+    
+    .profile-left {
+        flex: none;
+        align-items: center;
+    }
+    
+    .contact-links {
+        width: 100%;
+        max-width: 20rem;
+    }
+    
+    .cv-container {
+        padding: 1.5rem;
+        margin: 2rem 1rem 0;
+    }
+    
+    .languages-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 576px) {
     .profile-image-container {
-        width: 13rem;
-        height: 13rem;
+        width: 12rem;
+        height: 12rem;
     }
 
     .profile-info h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     .profile-text {
         font-size: 1rem;
+        padding: 0 1rem;
     }
 
     .contact-item {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
+        padding: 1rem;
+        margin: 0 1rem;
     }
 
     .contact-icon {
         margin-right: 0;
     }
+    
+    .header-content {
+        padding: 0 1rem;
+    }
+    
+    .site-title {
+        font-size: 1.25rem;
+    }
+    
+    .portfolio-item {
+        margin: 0 1rem;
+    }
+    
+    .profile {
+        padding: 3rem 0;
+    }
+    
+    .portfolio-section,
+    .cv-section,
+    .contact-section {
+        padding: 2rem 0;
+    }
+    
+    .cv-container {
+        margin: 0 0.5rem;
+        padding: 1rem;
+    }
+    
+    .cv-section-block {
+        margin-bottom: 1.5rem;
+    }
+    
+    .cv-item {
+        margin-bottom: 1rem;
+    }
+    
+    .simple-contact-container {
+        padding: 0 1rem;
+    }
 }
 
-@media (min-width: 768px) {
+/* Extra malé obrazovky (telefony na výšku) */
+@media (max-width: 375px) {
     .profile-image-container {
-        margin-left: 0;
+        width: 10rem;
+        height: 10rem;
     }
+    
+    .profile-info h1 {
+        font-size: 1.5rem;
+    }
+    
+    .section-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .portfolio-item {
+        margin: 0 0.5rem;
+    }
+    
+    .contact-links {
+        max-width: 16rem;
+    }
+    
+    .cv-container {
+        margin: 0 0.25rem;
+        padding: 0.75rem;
+    }
+    
+    .portfolio-grid {
+        padding: 0 0.5rem;
+    }
+}
 
+/* Touch-friendly styly */
+@media (hover: none) and (pointer: coarse) {
+    /* Styly pro dotykové zařízení */
+    .mobile-menu-btn,
+    .contact-links a,
+    .contact-item,
+    .portfolio-item,
+    nav a {
+        min-height: 44px; /* Doporučená minimální velikost pro touch */
+        min-width: 44px;
+    }
+    
+    .portfolio-item:hover,
+    .contact-item:hover,
+    .contact-links a:hover {
+        transform: none; /* Odstranit hover efekty na dotykových zařízeních */
+    }
+    
+    .portfolio-item:active {
+        transform: scale(0.98);
+        transition: transform 0.1s;
+    }
+}
+
+/* Lepší čitelnost textu na malých obrazovkách */
+@media (max-width: 480px) {
+    body {
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+    
+    .profile-text {
+        text-align: left;
+        line-height: 1.7;
+    }
+    
+    .portfolio-details p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    .cv-description {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+}
+
+/* Landscape mode na mobilních zařízeních */
+@media (max-width: 812px) and (orientation: landscape) and (max-height: 500px) {
+    .profile {
+        padding: 2rem 0;
+        min-height: auto;
+    }
+    
+    .portfolio-section,
+    .cv-section,
+    .contact-section {
+        padding: 2rem 0;
+        min-height: auto;
+    }
+    
+    .profile-image-container {
+        width: 8rem;
+        height: 8rem;
+    }
+    
     .profile-content {
-        justify-content: flex-start;
+        gap: 1rem;
     }
 }
