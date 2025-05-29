@@ -143,10 +143,12 @@ nav a.active {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 998;
+    pointer-events: none;
 }
 
 .mobile-menu-overlay.active {
     display: block;
+    pointer-events: auto;
 }
 
 @media (min-width: 768px) {
@@ -767,13 +769,14 @@ footer p {
         padding: 2rem 1.5rem;
         box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
         transition: right 0.3s ease-in-out;
-        z-index: 999;
+        z-index: 1000;
         gap: 0;
     }
 
     nav.active {
         right: 0;
-        z-index: 999;
+        z-index: 1000;
+        pointer-events: auto; /* Ensure navigation is clickable over overlay */
     }
     
     nav a {

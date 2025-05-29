@@ -62,8 +62,13 @@ function setupMobileMenu() {
             }
         });
         
-        // Zavření menu při kliknutí na overlay
-        overlay.addEventListener('click', closeMenu);
+        // Zavření menu při kliknutí na overlay (ale ne na navigaci)
+        overlay.addEventListener('click', (e) => {
+            // Zavřít menu pouze pokud se nekliklo na navigaci
+            if (!nav.contains(e.target)) {
+                closeMenu();
+            }
+        });
         
         // Zavření menu při kliknutí na odkaz
         const navLinks = nav.querySelectorAll('a');
