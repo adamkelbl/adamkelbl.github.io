@@ -1,1 +1,1 @@
-Built using a coding assistent (GitHub Copilot/Claude Code)
+Built using Claude Code 🤖
