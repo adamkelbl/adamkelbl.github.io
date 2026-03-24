@@ -313,22 +313,80 @@ nav a.active {
     }
 }
 
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
-    margin-top: 2rem;
+.carousel-wrapper {
+    position: relative;
+    padding: 0 3.5rem;
     max-width: var(--portfolio-width);
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 2rem;
-    justify-items: center; /* Center the grid items horizontally */
+    margin: 0 auto;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: calc(50% + 1rem);
+    transform: translateY(-50%);
+    background: #fff;
+    border: 2px solid #b0b8c4;
+    color: #6c757d;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    padding: 0;
+    line-height: 0;
+    box-sizing: border-box;
+}
+
+.carousel-btn svg {
+    display: block;
+    flex-shrink: 0;
+}
+
+.carousel-btn:hover:not(:disabled) {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(41, 128, 185, 0.15);
+}
+
+.carousel-btn:disabled {
+    opacity: 0.25;
+    cursor: default;
+}
+
+.carousel-prev {
+    left: 0;
+}
+
+.carousel-next {
+    right: 0;
+}
+
+.portfolio-grid {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 0.5rem 0 1.5rem;
+}
+
+.portfolio-grid::-webkit-scrollbar {
+    display: none;
 }
 
 .portfolio-item {
-    width: 100%; /* Slightly wider than before */
-    max-width: 400px; /* Set a maximum width for better control */
-    margin: 0 auto; /* Center each portfolio item */
+    flex: 0 0 calc((100% - 4rem) / 3);
+    scroll-snap-align: start;
+    max-width: none;
+    margin: 0;
     background: #fff;
     border-radius: 0.5rem;
     overflow: hidden;
@@ -377,14 +435,16 @@ nav a.active {
     line-height: 1.6;
 }
 
-.date-tags .tag {
-    background-color: #878787;
-    color: #ffffff;
+.date-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.625rem;
     margin-bottom: 1.25rem;
-    max-width: fit-content;
+}
+
+.date-tags .tag {
+    background-color: #878787;
+    color: #ffffff;
 }
 
 .portfolio-tags {
@@ -692,9 +752,12 @@ footer p {
         max-width: 95%;
     }
     
+    .carousel-wrapper {
+        padding: 0 2rem;
+    }
+
     .portfolio-grid {
-        padding: 0 1rem;
-        gap: 3rem;
+        gap: 1.5rem;
     }
     
     .cv-container {
@@ -709,8 +772,11 @@ footer p {
     }
 
     .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        gap: 1.5rem;
+    }
+
+    .portfolio-item {
+        flex: 0 0 calc((100% - 1.5rem) / 2);
     }
     
     .profile {
@@ -773,10 +839,16 @@ footer p {
         border-bottom: none;
     }
 
+    .carousel-wrapper {
+        padding: 0 1.75rem;
+    }
+
     .portfolio-grid {
-        grid-template-columns: 1fr;
-        max-width: 32rem;
-        gap: 2rem;
+        gap: 1rem;
+    }
+
+    .portfolio-item {
+        flex: 0 0 100%;
     }
 
     .section-header h1 {

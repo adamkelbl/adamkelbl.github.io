@@ -110,11 +110,44 @@ function setupAnimations() {
     });
 }
 
+// Carousel pro portfolio
+function setupCarousel() {
+    const grid = document.querySelector('.portfolio-grid');
+    if (!grid) return;
+
+    const prevBtn = document.querySelector('.carousel-prev');
+    const nextBtn = document.querySelector('.carousel-next');
+
+    function getScrollAmount() {
+        const item = grid.querySelector('.portfolio-item');
+        const gap = parseFloat(getComputedStyle(grid).gap) || 0;
+        return item.offsetWidth + gap;
+    }
+
+    function updateButtons() {
+        prevBtn.disabled = grid.scrollLeft <= 1;
+        nextBtn.disabled = grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 1;
+    }
+
+    prevBtn.addEventListener('click', () => {
+        grid.scrollLeft -= getScrollAmount();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        grid.scrollLeft += getScrollAmount();
+    });
+
+    grid.addEventListener('scroll', updateButtons, { passive: true });
+    window.addEventListener('resize', updateButtons);
+    updateButtons();
+}
+
 // Inicializace všech funkcí po načtení stránky
 document.addEventListener('DOMContentLoaded', () => {
     setActiveNavLink();
     setupMobileMenu();
     setupAnimations();
+    setupCarousel();
 });
 
 // Scroll efekt pro header
