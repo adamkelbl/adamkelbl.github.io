@@ -65,13 +65,32 @@
     font-family: var(--font);
   }
 
+  /* BACK LINK */
+  .back-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    font-family: var(--font);
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: all 0.15s ease;
+    margin-left: auto;
+  }
+  .back-link:hover { color: #e2e8f0; background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.12); }
+
   /* NAV */
   nav {
     display: flex;
     gap: 2px;
     overflow-x: auto;
     scrollbar-width: none;
-    margin-left: auto;
+    margin-left: 8px;
     flex-shrink: 0;
   }
   nav::-webkit-scrollbar { display: none; }
@@ -286,6 +305,7 @@
     <div class="header-title">Market sentiment and attention driven algorithmic trading strategy</div>
     <div class="header-author">Adam Kelbl</div>
   </div>
+  <a class="back-link" href="../portfolio.html">← Portfolio</a>
   <nav id="nav"></nav>
 </header>
 
