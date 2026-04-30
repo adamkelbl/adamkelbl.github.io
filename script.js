@@ -12,16 +12,6 @@ function setActiveNavLink() {
     });
 }
 
-// Funkce pro přidání efektu při scrollování
-function handleScroll() {
-    const header = document.querySelector('header');
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-}
-
 // Funkce pro mobilní menu
 function setupMobileMenu() {
     const menuBtn = document.querySelector('.mobile-menu-btn');
@@ -83,33 +73,6 @@ function setupMobileMenu() {
     }
 }
 
-// Funkce pro animace při načtení stránky
-function setupAnimations() {
-    const animatedElements = document.querySelectorAll('.fade-in, .slide-up');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });
-    
-    animatedElements.forEach(el => {
-        observer.observe(el);
-        // Nastavení výchozího stavu pro animaci
-        if (el.classList.contains('fade-in')) {
-            el.style.opacity = 0;
-        }
-        if (el.classList.contains('slide-up')) {
-            el.style.opacity = 0;
-            el.style.transform = 'translateY(30px)';
-        }
-    });
-}
-
 // Carousel pro portfolio
 function setupCarousel() {
     const grid = document.querySelector('.portfolio-grid');
@@ -146,9 +109,5 @@ function setupCarousel() {
 document.addEventListener('DOMContentLoaded', () => {
     setActiveNavLink();
     setupMobileMenu();
-    setupAnimations();
     setupCarousel();
 });
-
-// Scroll efekt pro header
-window.addEventListener('scroll', handleScroll);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 <head>
     <!-- Meta -->
     <meta charset="UTF-8"> 
@@ -9,11 +9,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <title>Portfolio - Adam Kelbl</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
     <!-- CSS & Font -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- JavaScript -->
     <script src="script.js" defer></script>
@@ -25,9 +25,9 @@
             <div class="site-title"><a href="index.html">Adam Kelbl</a></div>
             <button class="mobile-menu-btn">☰</button>
             <nav>
-                <a href="index.html">O mně</a>
+                <a href="index.html">About</a>
                 <a href="portfolio.html">Portfolio</a>
-                <a href="contact.html">Kontakt</a>
+                <a href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
@@ -46,7 +46,7 @@
                 <div class="portfolio-grid">
                     <!-- Projekt 4 -->
                     <div class="portfolio-item">
-                        <img src="finalproject/media/equity_curve.png" alt="" class="portfolio-image">
+                        <img src="media/finalproject.png" alt="Market sentiment and attention driven algorithmic trading strategy" class="portfolio-image" loading="lazy">
                         <div class="portfolio-details">
                             <h2>Market sentiment and attention driven algorithmic trading strategy</h2>
                             <div class="date-tags">
@@ -60,33 +60,32 @@
                                 <span class="tag">Google Trends</span>
                                 <span class="tag">LSEG Workspace</span>
                             </div>
-                            <a href="finalproject/finalproject.html" class="portfolio-link">Zobrazit projekt</a>
+                            <a href="finalproject.html" class="portfolio-link">View project</a>
                         </div>
                     </div>
-                     <!-- Projekt 3 -->
-                                        <div class="portfolio-item">
-                                            <img src="media/plot.png" alt="" class="portfolio-image">
-                                            <div class="portfolio-details">
-                                                <h2>Analysis of the Impact of Sentiment on Stock Market Volatility</h2>
-                                                <div class="date-tags">
-                                                     <span class="tag">07/2025</span>
-                                                </div>
-                                                <p>This project explores the relationship between market sentiment and the volatility of the S&P 500 index.
-                                                The goal is to assess whether sentiment indicators (Google SVI, Financial News sentiment, VIX index) can help explain or predict market volatility. Part of the MUNI Datathon 2025.</p>
-                                                <div class="portfolio-tags">
-                                                      <span class="tag">Python</span>
-                                                    <span class="tag">Pandas</span>
-                                                        <span class="tag">Statsmodels</span>
-                                                        <span class="tag">scikit-learn</span>
-                                                </div>
-                                                <a href="https://github.com/adamkelbl/sentiment-analysis" class="portfolio-link">Zobrazit projekt</a>
-                                            </div>
-                                        </div>
+                    <!-- Projekt 3 -->
+                    <div class="portfolio-item">
+                        <img src="media/datathon.png" alt="Analysis of the Impact of Sentiment on Stock Market Volatility" class="portfolio-image" loading="lazy">
+                        <div class="portfolio-details">
+                            <h2>Analysis of the Impact of Sentiment on Stock Market Volatility</h2>
+                            <div class="date-tags">
+                                <span class="tag">07/2025</span>
+                            </div>
+                            <p>This project explores the relationship between market sentiment and the volatility of the S&P 500 index. The goal is to assess whether sentiment indicators (Google SVI, Financial News sentiment, VIX index) can help explain or predict market volatility. Part of the MUNI Datathon 2025.</p>
+                            <div class="portfolio-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Pandas</span>
+                                <span class="tag">Statsmodels</span>
+                                <span class="tag">scikit-learn</span>
+                            </div>
+                            <a href="https://github.com/adamkelbl/sentiment-analysis" target="_blank" rel="noopener noreferrer" class="portfolio-link">View project</a>
+                        </div>
+                    </div>
                     <!-- Projekt 2 -->
                     <div class="portfolio-item">
-                        <img src="media/porsche.jpg" alt="Projekt 1" class="portfolio-image">
+                        <img src="media/porsche.jpg" alt="Factors Affecting the Prices of Used Porsche 911s" class="portfolio-image" loading="lazy">
                         <div class="portfolio-details">
-                            <h2>Determinanty cen ojetých vozů Porsche 911</h2>
+                            <h2>Factors Affecting the Prices of Used Porsche 911s</h2>
                             <div class="date-tags">
                                 <span class="tag">01/2025</span>
                             </div>
@@ -97,15 +96,15 @@
                                 <span class="tag">Statsmodels</span>
                                 <span class="tag">BeautifulSoup</span>
                             </div>
-                            <a href="https://github.com/adamkelbl/ZAEK_projekt" class="portfolio-link">Zobrazit projekt</a>
+                            <a href="https://github.com/adamkelbl/ZAEK_projekt" target="_blank" rel="noopener noreferrer" class="portfolio-link">View project</a>
                         </div>
                     </div>
 
                     <!-- Project 1 -->
                     <div class="portfolio-item">
-                        <img src="media/sklad.png" alt="Projekt 2" class="portfolio-image">
+                        <img src="media/warehouse.png" alt="Inventory Report for a Textile E-commerce Store" class="portfolio-image" loading="lazy">
                         <div class="portfolio-details">
-                            <h2>Report stavu zásob e-shopu s textilem</h2>
+                            <h2>Inventory Report for a Textile E-commerce Store</h2>
                             <div class="date-tags">
                                 <span class="tag">10/2024</span>
                             </div>
@@ -126,7 +125,9 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Adam Kelbl</p>
+        <div class="footer-content">
+            <p>&copy; 2026 Adam Kelbl</p>
+        </div>
     </footer>
 </body>
 </html>

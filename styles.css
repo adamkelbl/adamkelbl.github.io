@@ -1,5 +1,5 @@
 /* Základní styly */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root {
     --primary-color: #2980b9;
@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -138,15 +138,9 @@ nav a.active {
     }
 }
 
-@media (min-width: 768px) {
-    .mobile-menu-btn {
-        display: none;
-    }
-}
-
 /* Profile Section */
 .profile {
-    padding: 7rem 0;
+    padding: 5rem 0;
     min-height: 100vh;
 }
 
@@ -227,7 +221,7 @@ nav a.active {
     padding: 0.75rem 1rem; /* Slightly reduce height of each link */
     background-color: #fff;
     border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: var(--text-color);
     text-decoration: none;
     transition: all 0.3s;
@@ -239,8 +233,8 @@ nav a.active {
 }
 
 .contact-links a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     color: var(--primary-color);
 }
 
@@ -292,7 +286,6 @@ nav a.active {
 .portfolio-section {
     padding: 5rem 0;
     min-height: 100vh;
-    justify-items: center;
 }
 
 .container {
@@ -396,7 +389,6 @@ nav a.active {
     text-decoration: none;
     color: var(--text-color);
     display: block;
-     justify-content: center;
 }
 
 .portfolio-item:hover {
@@ -461,6 +453,7 @@ nav a.active {
     border-radius: 9999px;
     font-size: 0.875rem;
     font-weight: 500;
+    font-family: 'IBM Plex Mono', monospace;
     transition: all 0.3s;
 }
 
@@ -495,136 +488,10 @@ nav a.active {
     width: 100%;
 }
 
-/* CV Styles */
-.cv-section {
-    padding: 5rem 0;
-    background-color: #fff;
-}
-
-.cv-container {
-    margin-top: 2rem;
-    text-align: left;
-    background-color: #fff;
-    padding: 2.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: var(--container-width);
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media (max-width: 768px) {
-    .cv-container {
-        padding: 1.5rem;
-        margin: 2rem 1rem 0;
-    }
-}
-
-@media (max-width: 576px) {
-    .cv-container {
-        padding: 1rem;
-        margin: 2rem 0.5rem 0;
-    }
-}
-
-.cv-section-block {
-    margin-bottom: 2.5rem;
-}
-
-.cv-section-block h2 {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1.25rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #e9ecef;
-}
-
-.cv-item {
-    margin-bottom: 1.5rem;
-}
-
-.cv-item-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.25rem;
-}
-
-.cv-item-header h3 {
-    font-size: 1.25rem;
-    color: var(--secondary-color);
-    margin: 0;
-}
-
-.cv-date {
-    font-size: 1rem;
-    color: var(--text-light);
-    font-weight: 500;
-}
-
-.cv-institution {
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--secondary-color);
-    margin: 0 0 0.25rem 0;
-}
-
-.cv-description {
-    font-size: 1rem;
-    color: var(--text-color);
-    line-height: 1.6;
-}
-
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.25rem;
-}
-
-.skill-category h3 {
-    font-size: 1.25rem;
-    color: var(--secondary-color);
-    margin-bottom: 0.625rem;
-}
-
-.skill-category ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.skill-category li {
-    padding: 0.25rem 0;
-    color: var(--text-color);
-}
-
-.languages-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-}
-
-.language-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.625rem;
-    background-color: #fff;
-    border-radius: 0.25rem;
-}
-
-.language-name {
-    font-weight: 500;
-    color: var(--secondary-color);
-}
-
-.language-level {
-    color: var(--text-light);
-}
-
 /* Contact Styles */
 .contact-section {
     padding: 5rem 0;
+    min-height: 100vh;
 }
 
 .simple-contact-container {
@@ -674,27 +541,6 @@ nav a.active {
     vertical-align: middle;
 }
 
-.contact-text p {
-    margin: 0;
-    font-size: 1.125rem;
-}
-
-.contact-text a {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.3s;
-    display: block;
-    cursor: pointer;
-}
-
-.contact-text a:hover {
-    color: var(--primary-color);
-}
-
-.contact-item:hover .contact-text a {
-    color: var(--primary-color);
-}
-
 /* Footer */
 footer {
     background-color: var(--dark-bg);
@@ -715,35 +561,6 @@ footer p {
     font-size: 0.875rem;
 }
 
-/* Animace */
-.fade-in {
-    animation: fadeIn 0.5s ease-in;
-}
-
-.slide-up {
-    animation: slideUp 0.5s ease-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 /* Responzivní design */
 @media (max-width: 1200px) {
     .header-content,
@@ -758,10 +575,6 @@ footer p {
 
     .portfolio-grid {
         gap: 1.5rem;
-    }
-    
-    .cv-container {
-        padding: 1.5rem;
     }
 }
 
@@ -779,25 +592,10 @@ footer p {
         flex: 0 0 calc((100% - 1.5rem) / 2);
     }
     
-    .profile {
-        padding: 4rem 0;
-    }
-    
+    .profile,
     .portfolio-section,
-    .cv-section,
     .contact-section {
         padding: 3rem 0;
-    }
-    
-    .skills-container {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .cv-item-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.25rem;
     }
 }
 
@@ -864,15 +662,6 @@ footer p {
         width: 100%;
         max-width: 20rem;
     }
-    
-    .cv-container {
-        padding: 1.5rem;
-        margin: 2rem 1rem 0;
-    }
-    
-    .languages-container {
-        grid-template-columns: 1fr;
-    }
 }
 
 @media (max-width: 576px) {
@@ -915,29 +704,12 @@ footer p {
         margin: 0 1rem;
     }
     
-    .profile {
-        padding: 3rem 0;
-    }
-    
+    .profile,
     .portfolio-section,
-    .cv-section,
     .contact-section {
         padding: 2rem 0;
     }
-    
-    .cv-container {
-        margin: 0 0.5rem;
-        padding: 1rem;
-    }
-    
-    .cv-section-block {
-        margin-bottom: 1.5rem;
-    }
-    
-    .cv-item {
-        margin-bottom: 1rem;
-    }
-    
+
     .simple-contact-container {
         padding: 0 1rem;
     }
@@ -965,12 +737,7 @@ footer p {
     .contact-links {
         max-width: 16rem;
     }
-    
-    .cv-container {
-        margin: 0 0.25rem;
-        padding: 0.75rem;
-    }
-    
+
     .portfolio-grid {
         padding: 0 0.5rem;
     }
@@ -1016,10 +783,6 @@ footer p {
         line-height: 1.5;
     }
     
-    .cv-description {
-        font-size: 0.95rem;
-        line-height: 1.5;
-    }
 }
 
 /* Landscape mode na mobilních zařízeních */
@@ -1030,7 +793,6 @@ footer p {
     }
     
     .portfolio-section,
-    .cv-section,
     .contact-section {
         padding: 2rem 0;
         min-height: auto;
@@ -1044,4 +806,14 @@ footer p {
     .profile-content {
         gap: 1rem;
     }
+}
+
+/* Page fade-in */
+@keyframes pageFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+main {
+    animation: pageFadeIn 0.25s ease-in;
 }
