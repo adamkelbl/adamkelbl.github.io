@@ -535,6 +535,17 @@ nav a.active {
     color: var(--primary-color);
 }
 
+.contact-item-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.contact-item-sub {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
 .contact-icon img {
     width: 1.5rem;
     height: 1.5rem;
