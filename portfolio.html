@@ -1,133 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta -->
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <!-- Page info: browser tab, Google results, LinkedIn link preview -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio – Adam Kelbl</title>
     <meta name="theme-color" content="#ffffff">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <title>Portfolio - Adam Kelbl</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Portfolio – Adam Kelbl">
+    <meta property="og:url" content="https://adamkelbl.github.io/portfolio.html">
+    <meta property="og:image" content="https://adamkelbl.github.io/media/finalproject.png">
 
-    <!-- Favicon -->
+    <!-- Icon, fonts, styles -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-
-    <!-- CSS & Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="styles.css">
-
-    <!-- JavaScript -->
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="header-content">
-            <div class="site-title"><a href="index.html">Adam Kelbl</a></div>
-            <button class="mobile-menu-btn">☰</button>
-            <nav>
-                <a href="index.html">About</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
+    <div class="wrap">
 
-    <!-- Main Content -->
-    <main>
-        <section class="portfolio-section">
-            <div class="container">
-                <div class="section-header">
-                    <h1>Portfolio</h1>
-                </div>
-                <div class="carousel-wrapper">
-                <button class="carousel-btn carousel-prev" aria-label="Previous">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                </button>
-                <div class="portfolio-grid">
-                    <!-- Projekt 4 -->
-                    <div class="portfolio-item">
-                        <img src="media/finalproject.png" alt="Market sentiment and attention driven algorithmic trading strategy" class="portfolio-image" loading="lazy">
-                        <div class="portfolio-details">
-                            <h2>Market sentiment and attention driven algorithmic trading strategy</h2>
-                            <div class="date-tags">
-                                <span class="tag">04/2026</span>
-                            </div>
-                            <p>Bachelor's final project. Designs and tests an algorithmic trading strategy on SPY ETF (2015–2024) driven by market sentiment and attention indicators (VIX, SKEW, Google Trends SVI), processed via machine learning.</p>
-                            <div class="portfolio-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">Pandas</span>
-                                <span class="tag">scikit-learn</span>
-                                <span class="tag">Google Trends</span>
-                                <span class="tag">LSEG Workspace</span>
-                            </div>
-                            <a href="finalproject.html" class="portfolio-link">View project</a>
-                        </div>
-                    </div>
-                    <!-- Projekt 3 -->
-                    <div class="portfolio-item">
-                        <img src="media/datathon.png" alt="Analysis of the Impact of Sentiment on Stock Market Volatility" class="portfolio-image" loading="lazy">
-                        <div class="portfolio-details">
-                            <h2>Analysis of the Impact of Sentiment on Stock Market Volatility</h2>
-                            <div class="date-tags">
-                                <span class="tag">07/2025</span>
-                            </div>
-                            <p>Explores the relationship between market sentiment and S&P 500 volatility using Google SVI, financial news sentiment, and the VIX index. Part of MUNI Datathon 2025.</p>
-                            <div class="portfolio-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">Pandas</span>
-                                <span class="tag">Statsmodels</span>
-                                <span class="tag">scikit-learn</span>
-                            </div>
-                            <a href="https://github.com/adamkelbl/sentiment-analysis" target="_blank" rel="noopener noreferrer" class="portfolio-link">View project</a>
-                        </div>
-                    </div>
-                    <!-- Projekt 2 -->
-                    <div class="portfolio-item">
-                        <img src="media/porsche.jpg" alt="Factors Affecting the Prices of Used Porsche 911s" class="portfolio-image" loading="lazy">
-                        <div class="portfolio-details">
-                            <h2>Factors Affecting the Prices of Used Porsche 911s</h2>
-                            <div class="date-tags">
-                                <span class="tag">01/2025</span>
-                            </div>
-                            <p>OLS multiple regression analysis of used Porsche 911 prices based on web-scraped data from an online car marketplace, identifying key determinants of market value.</p>
-                            <div class="portfolio-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">Pandas</span>
-                                <span class="tag">Statsmodels</span>
-                                <span class="tag">BeautifulSoup</span>
-                            </div>
-                            <a href="https://github.com/adamkelbl/ZAEK_projekt" target="_blank" rel="noopener noreferrer" class="portfolio-link">View project</a>
-                        </div>
-                    </div>
-
-                    <!-- Project 1 -->
-                    <div class="portfolio-item">
-                        <img src="media/warehouse.png" alt="Inventory Report for a Textile E-commerce Store" class="portfolio-image" loading="lazy">
-                        <div class="portfolio-details">
-                            <h2>Inventory Report for a Textile E-commerce Store</h2>
-                            <div class="date-tags">
-                                <span class="tag">10/2024</span>
-                            </div>
-                            <p>Inventory report tracking stock levels, minimum order quantities, and reorder alerts for a textile e-commerce warehouse.</p>
-                            <div class="portfolio-tags">
-                                <span class="tag">Excel</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-btn carousel-next" aria-label="Next">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="-2 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                </button>
-                </div>
+        <!-- ============ HEADER (same on index.html and cv.html) ============ -->
+        <header class="site-header">
+            <div>
+                <a href="index.html" class="site-name">Adam Kelbl</a>
             </div>
-        </section>
-    </main>
+            <nav class="site-nav" aria-label="Main">
+                <a href="index.html">about</a>
+                <a href="portfolio.html" aria-current="page">portfolio</a>
+                <a href="cv.html">cv</a>
+            </nav>
+        </header>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 Adam Kelbl</p>
-        </div>
-    </footer>
+        <main>
+            <h1 class="section-label">Portfolio</h1>
+
+            <!--
+                ============ HOW TO ADD A PROJECT ============
+                1. Copy the block below and paste it into the list (newest project goes first)
+                2. Rewrite the texts. Write &amp; instead of & in text.
+                   New paragraph in the description? Add another <p class="project-desc">...</p> line.
+                3. No link? Delete the whole <div class="project-links"> ... </div> part.
+                   Link inside this site (e.g. finalproject.html)? Delete target="_blank" rel="noopener noreferrer".
+
+                <li class="project">
+                    <p class="project-date">Mon YYYY</p>
+                    <div class="project-body">
+                        <h2 class="project-title">Project title</h2>
+                        <p class="project-desc">One or two sentences about the project.</p>
+                        <ul class="project-tags">
+                            <li class="tag">Python</li>
+                            <li class="tag">Pandas</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/adamkelbl/REPO" target="_blank" rel="noopener noreferrer" class="project-link">Source</a>
+                        </div>
+                    </div>
+                </li>
+            -->
+
+            <ol class="project-list">
+
+                <!-- ============ Algorithmic trading strategy – bachelor's thesis ============ -->
+                <li class="project">
+                    <p class="project-date">Apr 2026</p>
+                    <div class="project-body">
+                        <h2 class="project-title">Market sentiment and attention driven algorithmic trading strategy</h2>
+                        <p class="project-desc">Bachelor's final project. Designs and tests an algorithmic trading strategy on SPY ETF (2015–2024) driven by market sentiment and attention indicators (VIX, SKEW, Google Trends SVI), processed via machine learning.</p>
+                        <p class="project-desc">Passed with excellent results.</p>
+                        <ul class="project-tags">
+                            <li class="tag">Python</li>
+                            <li class="tag">Pandas</li>
+                            <li class="tag">scikit-learn</li>
+                            <li class="tag">Google Trends</li>
+                            <li class="tag">LSEG Workspace</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="finalproject.html" class="project-link">View project</a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- ============ Sentiment and volatility – MUNI Datathon ============ -->
+                <li class="project">
+                    <p class="project-date">Jul 2025</p>
+                    <div class="project-body">
+                        <h2 class="project-title">Analysis of the Impact of Sentiment on Stock Market Volatility</h2>
+                        <p class="project-desc">Explores the relationship between market sentiment and S&amp;P 500 volatility using Google SVI, financial news sentiment, and the VIX index.</p>
+                        <p class="project-desc">Part of MUNI Datathon 2025.</p>
+                        <ul class="project-tags">
+                            <li class="tag">Python</li>
+                            <li class="tag">Pandas</li>
+                            <li class="tag">Statsmodels</li>
+                            <li class="tag">scikit-learn</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/adamkelbl/sentiment-analysis" target="_blank" rel="noopener noreferrer" class="project-link">Source</a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- ============ Porsche 911 prices – regression ============ -->
+                <li class="project">
+                    <p class="project-date">Jan 2025</p>
+                    <div class="project-body">
+                        <h2 class="project-title">Factors Affecting the Prices of Used Porsche 911s</h2>
+                        <p class="project-desc">OLS multiple regression analysis of used Porsche 911 prices based on web-scraped data from an online car marketplace, identifying key determinants of market value.</p>
+                        <p class="project-desc">My first hands-on experience with real data and applied econometrics.<br>I picked up Python along the way, with some help from AI.</p>
+                        <ul class="project-tags">
+                            <li class="tag">Python</li>
+                            <li class="tag">Pandas</li>
+                            <li class="tag">Statsmodels</li>
+                            <li class="tag">BeautifulSoup</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/adamkelbl/ZAEK_projekt" target="_blank" rel="noopener noreferrer" class="project-link">Source</a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- ============ Inventory report – Excel (no link) ============ -->
+                <li class="project">
+                    <p class="project-date">Oct 2024</p>
+                    <div class="project-body">
+                        <h2 class="project-title">Inventory Report for a Textile E-commerce Store</h2>
+                        <p class="project-desc">An Excel report tracking stock levels, minimum order quantities, and reorder alerts for a textile e-commerce warehouse.</p>
+                        <p class="project-desc">Built back when you couldn't just vibe code an end-to-end analytics platform with Claude :)</p>
+                        <ul class="project-tags">
+                            <li class="tag">Excel</li>
+                            <li class="tag">Power Query</li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ol>
+        </main>
+
+    </div>
 </body>
 </html>
